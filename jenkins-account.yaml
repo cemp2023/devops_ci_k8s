@@ -69,3 +69,12 @@ rules:
 - apiGroups: [""]
   resources: ["persistentvolumes"]
   verbs: ["create","delete","get","list","patch","update","watch"]
+
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: jenkins-token
+  annotations:
+    kubernetes.io/service-account.name: jenkins
+type: kubernetes.io/service-account-token
