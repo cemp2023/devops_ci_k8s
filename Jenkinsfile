@@ -1,5 +1,8 @@
 pipeline {
   agent any
+  tools {
+    maven 'maven comand'
+  }
   stages {
     stage('clone repository') {
       steps {
